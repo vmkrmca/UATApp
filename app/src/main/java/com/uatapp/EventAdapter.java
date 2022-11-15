@@ -50,6 +50,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
 
         if (mEventArrayList.get(position).eventStatus.equals("true")) {
             holder.tvRequestEvent.setText("APPROVED");
+            holder.tvRequestEvent.setClickable(false);
         }else{
             holder.tvRequestEvent.setText("REQUEST FOR AN EVENT");
         }
