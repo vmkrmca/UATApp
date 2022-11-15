@@ -51,10 +51,12 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         if (mEventArrayList.get(position).eventStatus.equals("true")) {
             holder.tvRequestEvent.setText("APPROVED");
             holder.tvRequestEvent.setClickable(false);
+            holder.tvRequestEvent.setEnabled(false);
         }else{
             holder.tvRequestEvent.setText("REQUEST FOR AN EVENT");
+            holder.tvRequestEvent.setOnClickListener(v -> mRequestEventClickListener.onRequestClick(mEventArrayList.get(position)));
         }
-        holder.tvRequestEvent.setOnClickListener(v -> mRequestEventClickListener.onRequestClick(mEventArrayList.get(position)));
+
     }
 
     public static Bitmap getImage(byte[] image) {

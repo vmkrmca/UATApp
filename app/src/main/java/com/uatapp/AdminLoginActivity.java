@@ -40,7 +40,7 @@ public class AdminLoginActivity extends Activity implements View.OnClickListener
                     String userName = etUserName.getText().toString();
                     String password = etPassword.getText().toString();
 
-                    if (userName.equals("Admin") && password.equals("Admin")){
+                    if (userName.equals("Admin") && password.equals("Admin@001")){
 
                         Intent intent = new Intent(this,AdminDashBoardActivity.class);
                         startActivity(intent);
